@@ -8,14 +8,14 @@
     <!-- <script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.5/build/spline-viewer.js"></script> -->
 </head>
 <body class="main" style="background-color: black;">
-<nav>
+<!-- <nav>
     <ul>
         <li><a href="#home"><img src="/static/sidebar.png" alt="Home" class="icon"></a></li>
         <li><a href="#projects"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAAEGklEQVR4nO2abWhWZRjHf3NzM5uaYqGks8SJISliappmVvtgpH4oGaGgaAku09QPKhXzBcqQIInph0n5DhtUooISRWiJlPbBV0yNdBXa1PmStenMxTX+B24fn23Ps3OfPTvQH26ec5/7Ptd9/Z9zv1wvB/7HPcgFRgOLgI3AfqAKqAHqVez6HLAP+BRYAIwEOpJh5AFTgQrgL6ChleUasBWYAuS0JYGewCrgoqPMXeAIsB54HXgOKAC6S7kcXfcDJgBvAOXAiQRSVcAyoGuUBB4A3gWuOwMfAt4C+oSQ+xiwGDjmyK0G5kXxhp4BTjkD7QSe9j0I8DzwjTPOj8BgH4KzgKXAHQm26TOW6PES8IvGrAVmhhFmu8k2CTMiK9p4h3kQWOe8nTX6Y9PekXZKwFVgIpnDTKBOuqxLh4x1rNSDfwJDyTxeBP6WTh+m+tBKPVDja6F5wgvALek2o6XOtv//C9zWg+0Ns0XE3k5hU506A7+q43ueBn4YGK5i1z6wSTp+19R6eUcdDns8iNxdp8yTzIeAPySzOLGxu3Nij8cf1jtE7Nr3FDsDZLsNb6vhK/zCfSN27QvZwGnJneQ2nNTNyfiFu0bM2PSJRdJ5d3BjoG5cSnxN7Rw9ZXHYYZmPHBwjsoX44YA7kzarYj5C3LBKutsvP6lirqpvzJWFYKU0AvnF0v0Lq1xQpVcEAy2PaPsN8JRz9vGPKuYBxo3IAOc8abSrGiLyNaIm0keyf7PKFVV6xJDIYMm2IAY/qzIohkTGS/b3VtmhyisxJFIi2RuQL26V1TEkUi7ZC60yzomQxI3IecludMfN97isG2Z3xYXIKMn93XWwPtLNj2NEZGOyJVEoS/IG8EgMiBQocGfxhf6JjZ9F4ABFRWSzZFoU/z70BW7qzfgKi5ZGQKRI0f9aRfebtFYbFE0xPz4sbKA5KsM8OVNV0nFJcx1t9e9Sx28VOm0vyFMmLDjJW/RmLclyXA98rrRappErn6NBZ0fKLoetl7N6cC/Qhcwh35kldt49ma6Avo5l/CaZwQAnk2VZrCGtEVKoffpOyNRaa5ClDSJIsp4KY51XJMaN2ghFyk0G2/amINzTGkyTkLo2Si3YjvQacNAhYIv65bD/SF0qe3USpONlPg5MB7Yr1+5mdC3L24kQmOqQSPUkzldM7JATsdwnk+cTGXWrdb1FQbXqhPy6ndQ/ALPCEsiSXXRXgtcCHZrpb23Piqybdw8iMqkUS+t9CcxvztRIBznOwq5XZD4ZsvXVQpkTCwv+za+BVxWJMdNmjNZZiabnEn0AMEOO3KNEgPedFLQpE6AbMEJfNlQmmQ52YH4QgTMWOhAckKnWPE82HU6LuA8D0DvGAntkFrtKW8LxqGx/W8xPEBPkOl/w9M60MuniP+xodJkoh7XVAAAAAElFTkSuQmCC" alt="Projects" class="icon"></a></li>
         <li><a href="#about"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAABzUlEQVR4nO2ZPUoDQRSAv4CYKpImiz94BdFbCIJRL2BjIRhtLNJa23kFrTyB2FiJJIUajJBcwAtEuyAjAy9hWLI/Kpu8CfPBg9nM7Ga+fTPLziwE9FIGToEW8CVhy8fAAp6wBnQAkxCPQBUPMtGRDveAOlCR2AP6UncPlFDMmSMx6a5XHZldFNOWTtpMJHEgbW5RzKd00g6lJJZS5o+WYFzIYO5EtGGCiDJMyIgyTMhIgTTTHq++ZaSpXcS+s9Vytr3UKmKXCa/yYrqS0bYGvGkU2QI+nPPfgSihbQR0pV03lpmZimwDAznvQSRGnYwyJCL5/WLWIkfAUM65ARalc5NkkiRwZKYuUnLuoo2r2MrSnQN2zmzEjpdz/EfhIvauX0u7oWRlEm4GvlMyMRMRuzC7kzZ2sbaTcb3aPzNRmMih1Nsn1Cb5iGT5/JdMFDq0zoF1povR+oryW4KINszcDq2ybGK3nU1sW25InTcizwnrgHhd2sWKjNwiWZvY3oj0cmxiezG06jk2sb0QqeTcxNaGGfVrkENEM2Yk0pKCndheizSk0PfhO2GaiF0MvTgy+zInfMG4c3fVkfE1xtjMnABPzuc4nyIQCAQCTJ0fgR0Xn2rYr3IAAAAASUVORK5CYII=" alt="About Me" class="icon"></a></li>
         <li><a href="#contact"><img src="/static/praying.png" alt="Thanks" class="icon"></a></li>
     </ul>
-</nav>
+</nav> -->
 <div class="content">
    
     <section id="home" class="section home">
@@ -28,7 +28,7 @@
             <img src="/static/arrows-economy-chart.jpg" alt="Right Card Image">
             <p>Laptop prices are crucial in assessing a device’s value and fitting it within your budget. As technology evolves, prices can change due to new features and market trends. By predicting price trends, buyers can plan their purchases more effectively and find the best deals. Understanding these price dynamics allows for a better balance between cost and desired features, ensuring a smarter investment.</p>
         </div>
-        <button class="explore-button"><a href="/form">Explore</a></button>
+        <button class="explore-button"><a href="templates/form.html">Explore</a></button>
     </section>
 
     <section id="projects" class="section">
